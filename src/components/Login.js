@@ -1,64 +1,41 @@
 import React, {Component} from 'react';
+import withFirebaseAuth from 'react-with-firebase-auth'
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+import firebaseConfig from '../fireabaseConfig';
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
 
 class Login extends Component{
 
   render(){
+      const { user, signOut, signInWithGoogle } = this.props;
       return(
-   <div>
-     <nav>
-        <div className="nav-wrapper">
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li><a href="sass.html">Log In</a></li>
-            <li><a href="badges.html">Log Out</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div className="row">
-    <form className="col s12">
-      <div className="row">
-        <div className="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" className="validate"/>
-          <label for="first_name">First Name</label>
-        </div>
-        <div className="input-field col s6">
-          <input id="last_name" type="text" className="validate"/>
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div className="row">
-        <div className="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" className="validate"/>
-          <label for="disabled">Disabled</label>
-        </div>
-      </div>
-      <div className="row">
-        <div className="input-field col s12">
-          <input id="password" type="password" className="validate"/>
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div className="row">
-        <div className="input-field col s12">
-          <input id="email" type="email" className="validate"/>
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col s12">
-          This is an inline input field:
-          <div className="input-field inline">
-            <input id="email_inline" type="email" className="validate"/>
-            <label for="email_inline">Email</label>
-            <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-    </div>       
+        <div>
+          {
+            user ? 
+            <div>
+              <p>Hola, {user.displayName} </p>
+              <button onClick={signOut}>Cerrar sesion</button>
+            </div>
+            : 
+            <div>
+              <button onClick={signInWithGoogle}>Iniciar sesion</button>
+            </div>
+          }
+        </div>       
       )
   }
 
 }
 
-export default Login;
+const firebaseAppAuth = firebaseApp.auth();
+const providers = {
+  googleProvider: new firebase.auth.GoogleAuthProvider()
+}
+
+export default withFirebaseAuth({
+    providers,
+    firebaseAppAuth
+})(Login);

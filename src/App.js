@@ -3,8 +3,13 @@ import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import 'materialize-css/dist/css/materialize.css'
-/*Import Components*/
+
+// Firebase
+
+
+// Import Components
 import Login from './components/Login'
+
 
 class App extends Component {
   render() {
