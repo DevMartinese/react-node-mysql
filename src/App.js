@@ -1,34 +1,41 @@
-import React, { Component  } from 'react';
+import React, { Component }  from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import 'materialize-css/dist/css/materialize.css'
 
-// Firebase
-
+// Redux
+import { connect } from "react-redux";
 
 // Import Components
-import Login from './components/Login'
+import Login from './components/Auth/Login'
+import TopMenu from "./components/Navigation/TopMenu/topMenu";
+import ProtectedRoute from './components/Auth/ProtectedRoute'
 
-
-class App extends Component {
-  render() {
+function App(props) {
+    const { isAuthenticated, isVerifying } = props;
     return (
-      <BrowserRouter>
         <div>
-          <Redirect
-            from="/"
-            to="/Login" />
-          <Switch>
-            <Route
-              exact
-              path="/Login"
-              render={() => <Login />} />
-          </Switch>
+            <TopMenu></TopMenu>
+            <Switch>
+                {/* <ProtectedRoute
+                    exact
+                    path="/"
+                    component={Home}
+                    isAuthenticated={isAuthenticated}
+                    isVerifying={isVerifying}
+                /> */}
+                <Route path="/login" component={Login} />
+            </Switch>
         </div>
-      </BrowserRouter>
     );
-  }
 }
 
-export default App;
+function mapStateToProps(state) {
+    return {
+        isAuthenticated: state.auth.isAuthenticated,
+        isVerifying: state.auth.isVerifying
+    };
+}
+
+export default connect(mapStateToProps)(App);
