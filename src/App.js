@@ -2,8 +2,6 @@ import React, { Component }  from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
-import 'materialize-css/dist/css/materialize.css'
-
 // Redux
 import { connect } from "react-redux";
 
