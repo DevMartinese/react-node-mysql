@@ -9,7 +9,8 @@ a { text-decoration: none; }
     width: 100%;
     height: 60px;
     background: #ffffff;
-    box-shadow: 0px 3px rgba(200, 200, 200, 0.4);
+    position: fixed;
+    box-shadow: 0px 1px rgba(200, 200, 200, 0.4);
 }
 
 .navTopLeft {
@@ -99,7 +100,11 @@ a { text-decoration: none; }
     width: 90%;
     display: flex;
     border: 1px solid #E9E9E9;
-    margin: 0px auto;
+    margin: -2px auto;
+    z-index: 1000;    
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
     border-radius: 0px 0px 10px 10px;
     height: 30px;
     background-color: #F7F7F7;

@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 // Import Components
 import Login from './components/Auth/Login'
 import TopMenu from "./components/Navigation/TopMenu/topMenu";
+import SideNav from "./components/Navigation/SideNav/sideNav";
 import ProtectedRoute from './components/Auth/ProtectedRoute'
 
 function App(props) {
@@ -15,6 +16,7 @@ function App(props) {
     return (
         <div>
             <TopMenu></TopMenu>
+            <SideNav></SideNav>
             <Switch>
                 {/* <ProtectedRoute
                     exact

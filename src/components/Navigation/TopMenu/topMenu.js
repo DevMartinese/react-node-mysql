@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 import './topMenu.css';
 
 // Icons
-import { FaLaptopCode, FaRegEnvelope, FaRegBell, FaRegTimesCircle } from 'react-icons/fa';
+import { FaLaptopCode, FaRegEnvelope, FaRegBell } from 'react-icons/fa';
 
 // http://demo.foxthemes.net/gotubev1/your-watch-later.html#
 
 class TopMenu extends Component {
     state = {
-        showMenu: true,
+        showMenu: false,
     };
     showUserMenu = () => {
-        this.setState({ showMenu: true });
+        if(this.state.showMenu) {
+            this.setState({ showMenu: false });
+        } else {
+            this.setState({ showMenu: true });
+        }
     }
     hideUserMenu = () => {
         this.setState({ showMenu: false });

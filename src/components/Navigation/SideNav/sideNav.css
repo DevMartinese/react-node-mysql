@@ -1,0 +1,92 @@
+*:focus {
+    outline: none;
+}
+
+li {list-style: none;}
+a { text-decoration: none; }
+
+
+hr {
+    border: 1px solid rgba(200,200,200, .2);
+}
+
+.sideNav {
+    border-right: 1px solid rgba(200, 200, 200, 0.4);
+    width: 20%;
+    z-index: 1;
+    position: fixed;
+    max-height: 100vh;
+    padding-bottom: 60px;
+    margin-top: 60px;
+	overflow-y: scroll;
+}
+
+.sideNav-title {
+    color: #999595;
+    letter-spacing: .5625pt;
+    padding: 15px 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.sideNav li {
+    font-size: .875pc;
+    align-items: center;
+    color: #6d6d6d;
+    display: flex;
+    padding: 15px 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.sideNav li span {
+    margin-left: 20px;
+}
+
+.sideNav li:hover {
+    background-color: rgba(200,200,200, .2);
+}
+
+#selected {
+    color:orange !important;
+    background-color: rgba(254,127,5, .2);
+}
+
+#selected:before {
+    border-radius: 22%;
+    height: 20px;
+    background: linear-gradient(to right,#fd0505,#ffa805);
+    width: .1875in;
+    content: "";
+    position: absolute;
+    left: -.75pc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: rgba(100,100,100,.3);
+}
