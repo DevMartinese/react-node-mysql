@@ -65,9 +65,6 @@ class TopMenu extends Component {
                             <a href="">Configuración</a>
                         </li>
                         <li>
-                            |
-                        </li>
-                        <li>
                             <a href="">Cerrar sesión</a>
                         </li>
                     </div>
