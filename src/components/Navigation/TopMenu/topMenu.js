@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './topMenu.css';
 
+// Redux
+import { connect } from "react-redux";
+
 // Icons
 import { FaLaptopCode, FaRegEnvelope, FaRegBell } from 'react-icons/fa';
 
@@ -74,6 +77,10 @@ class TopMenu extends Component {
     }
 
 }
+function mapStateToProps(state) {
+    return {
+        isAuthenticated: state.auth.isAuthenticated
+    };
+}
 
-
-export default TopMenu;
+export default connect(mapStateToProps)(TopMenu);
