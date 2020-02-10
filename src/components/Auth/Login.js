@@ -14,7 +14,6 @@ class Login extends Component {
     render() {
         const { isAuthenticated, userName } = this.props;
         if (isAuthenticated) {
-            console.log(this.props);
             return (
                 <div>
                     INICIADO como {userName}
