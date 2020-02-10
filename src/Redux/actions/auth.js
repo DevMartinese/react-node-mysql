@@ -1,4 +1,6 @@
-import { myFirebase } from "../../Firebase/firebase";
+import { myFirebase, firebaseProviders } from "../../Firebase/firebase";
+
+import * as env from '../../environment.env'
 
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
@@ -61,14 +63,12 @@ const verifySuccess = () => {
 };
 
 export const loginUser = () => dispatch => {
-    const providers = {
-        googleProvider: new myFirebase.auth.GoogleAuthProvider()
-    }
     dispatch(requestLogin());
     myFirebase
         .auth()
-        .signInWithPopup(providers)
+        .signInWithPopup(firebaseProviders)
         .then(user => {
+            window.location = env.url;
             dispatch(receiveLogin(user));
         })
         .catch(error => {
@@ -83,6 +83,7 @@ export const logoutUser = () => dispatch => {
         .auth()
         .signOut()
         .then(() => {
+            window.location = env.url + '/login';
             dispatch(receiveLogout());
         })
         .catch(error => {

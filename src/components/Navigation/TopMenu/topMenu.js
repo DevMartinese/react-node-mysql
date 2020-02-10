@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './topMenu.css';
 
+// Redux
+import { connect } from "react-redux";
+import { logoutUser } from '../../../Redux/actions';
+
 // Icons
 import { FaLaptopCode, FaRegEnvelope, FaRegBell } from 'react-icons/fa';
 
@@ -19,6 +23,10 @@ class TopMenu extends Component {
     }
     hideUserMenu = () => {
         this.setState({ showMenu: false });
+    }
+    logoutUserButton = () => {
+        const { dispatch } = this.props;
+        dispatch(logoutUser());
     }
     render() {
         const { showMenu } = this.state;
@@ -62,10 +70,10 @@ class TopMenu extends Component {
                             <span onClick={this.hideUserMenu}>cerrar</span>
                         </li>
                         <li>
-                            <a href="">Configuración</a>
+                            <span href="">Configuración</span>
                         </li>
                         <li>
-                            <a href="">Cerrar sesión</a>
+                            <span onClick={this.logoutUserButton()}>Cerrar sesión</span>
                         </li>
                     </div>
                 }
@@ -74,6 +82,10 @@ class TopMenu extends Component {
     }
 
 }
+function mapStateToProps(state) {
+    return {
+        isAuthenticated: state.auth.isAuthenticated
+    };
+}
 
-
-export default TopMenu;
+export default connect(mapStateToProps)(TopMenu);

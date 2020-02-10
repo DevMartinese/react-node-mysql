@@ -118,14 +118,7 @@ a { text-decoration: none; }
     font-size: 20px;
     margin-left: 10px;
 }
-.dropDownMenuUser a {
-    display: inline-block;
-    font-size: 14px;
-    color: #737373;
-    margin-left: 5px;
-    cursor: pointer;
-}
-.dropDownMenuUser a:hover {
+.dropDownMenuUser span:hover {
     color: #FA7500;
     text-decoration: underline;
 }

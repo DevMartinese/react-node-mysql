@@ -9,14 +9,14 @@ import { connect } from "react-redux";
 import Login from './components/Auth/Login'
 import TopMenu from "./components/Navigation/TopMenu/topMenu";
 import SideNav from "./components/Navigation/SideNav/sideNav";
-import ProtectedRoute from './components/Auth/ProtectedRoute'
+import ProtectedRoute from './components/Auth/ProtectedRoute';
 
 function App(props) {
     const { isAuthenticated, isVerifying } = props;
     return (
         <div>
-            <TopMenu></TopMenu>
-            <SideNav></SideNav>
+            {   isAuthenticated ? <TopMenu></TopMenu> : null}
+            {   isAuthenticated ? <SideNav></SideNav> : null}
             <Switch>
                 {/* <ProtectedRoute
                     exact
