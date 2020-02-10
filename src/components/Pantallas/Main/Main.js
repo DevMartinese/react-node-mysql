@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './sideNav.css';
+import './Main.css';
 
 // Icons
 import { FaLaptopCode, FaCog } from 'react-icons/fa';
 
 // http://demo.foxthemes.net/gotubev1/your-watch-later.html#
 
-class sideNav extends Component {
+class Main extends Component {
     render() {
         return (
             <div className="sideNav">
@@ -48,4 +48,4 @@ class sideNav extends Component {
 }
 
 
-export default sideNav;
+export default Main;
