@@ -15,10 +15,8 @@ function App(props) {
     const { isAuthenticated, isVerifying } = props;
     return (
         <div>
-            {
-                isAuthenticated ?
-                (<TopMenu></TopMenu>, <SideNav></SideNav>) : null
-            }
+            {   isAuthenticated ? <TopMenu></TopMenu> : null}
+            {   isAuthenticated ? <SideNav></SideNav> : null}
             <Switch>
                 {/* <ProtectedRoute
                     exact
