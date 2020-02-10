@@ -78,6 +78,7 @@ export const loginUser = () => dispatch => {
 };
 
 export const logoutUser = () => dispatch => {
+    console.log('estoy');
     dispatch(requestLogout());
     myFirebase
         .auth()

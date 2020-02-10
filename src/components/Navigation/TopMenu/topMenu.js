@@ -3,7 +3,6 @@ import './topMenu.css';
 
 // Redux
 import { connect } from "react-redux";
-import { logoutUser } from '../../../Redux/actions';
 
 // Icons
 import { FaLaptopCode, FaRegEnvelope, FaRegBell } from 'react-icons/fa';
@@ -11,25 +10,7 @@ import { FaLaptopCode, FaRegEnvelope, FaRegBell } from 'react-icons/fa';
 // http://demo.foxthemes.net/gotubev1/your-watch-later.html#
 
 class TopMenu extends Component {
-    state = {
-        showMenu: false,
-    };
-    showUserMenu = () => {
-        if(this.state.showMenu) {
-            this.setState({ showMenu: false });
-        } else {
-            this.setState({ showMenu: true });
-        }
-    }
-    hideUserMenu = () => {
-        this.setState({ showMenu: false });
-    }
-    logoutUserButton = () => {
-        const { dispatch } = this.props;
-        dispatch(logoutUser());
-    }
     render() {
-        const { showMenu } = this.state;
         return (
             <div className="navTop">
                 <div className="navTopLeft">
@@ -62,21 +43,6 @@ class TopMenu extends Component {
                         </button>
                     </li>
                 </div>
-                
-                {
-                    showMenu && 
-                    <div className="dropDownMenuUser">
-                        <li className="closeDropDown">
-                            <span onClick={this.hideUserMenu}>cerrar</span>
-                        </li>
-                        <li>
-                            <span href="">Configuración</span>
-                        </li>
-                        <li>
-                            <span onClick={this.logoutUserButton()}>Cerrar sesión</span>
-                        </li>
-                    </div>
-                }
             </div>
         )
     }

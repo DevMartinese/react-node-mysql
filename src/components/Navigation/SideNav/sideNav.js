@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import './sideNav.css';
 
 // Icons
-import { FaLaptopCode, FaCog } from 'react-icons/fa';
+import { FaLaptopCode, FaCog, FaPowerOff } from 'react-icons/fa';
 
-// http://demo.foxthemes.net/gotubev1/your-watch-later.html#
+// Redux
+import { logoutUser } from '../../../Redux/actions';
+import { connect } from "react-redux";
+
 
 class sideNav extends Component {
+    logoutUserAction = () => {
+        const { dispatch } = this.props;
+        dispatch(logoutUser());
+    }
     render() {
         return (
             <div className="sideNav">
@@ -41,11 +48,23 @@ class sideNav extends Component {
                     <FaCog />
                     <span>Configuración</span>
                 </li>
+                <li onClick={this.logoutUserAction}>
+                    <FaPowerOff />
+                    <span>Cerrar sesión</span>
+                </li>
             </div>
         )
     }
 
 }
 
+function mapStateToProps(state) {
+    return {
+        isLoggingIn: state.auth.isLoggingIn,
+        loginError: state.auth.loginError,
+        isAuthenticated: state.auth.isAuthenticated,
+        userName: state.auth.user.displayName
+    };
+}
 
-export default sideNav;
+export default connect(mapStateToProps)(sideNav);

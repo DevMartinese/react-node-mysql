@@ -9,38 +9,8 @@ import { FaLaptopCode, FaCog } from 'react-icons/fa';
 class Main extends Component {
     render() {
         return (
-            <div className="sideNav">
-                <div className="sideNav-title">
-                    Menu
-                </div>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <li id="selected">
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <hr></hr>
-                <div className="sideNav-title">
-                    Menu
-                </div>
-                <li>
-                    <FaCog />
-                    <span>Configuración</span>
-                </li>
+            <div className="sideNavComponent">
+                
             </div>
         )
     }

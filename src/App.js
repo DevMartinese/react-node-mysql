@@ -10,6 +10,7 @@ import Login from './components/Auth/Login'
 import TopMenu from "./components/Navigation/TopMenu/topMenu";
 import SideNav from "./components/Navigation/SideNav/sideNav";
 import ProtectedRoute from './components/Auth/ProtectedRoute';
+import Main from "./components/Pantallas/Main/Main";
 
 function App(props) {
     const { isAuthenticated, isVerifying } = props;
@@ -18,13 +19,13 @@ function App(props) {
             {   isAuthenticated ? <TopMenu></TopMenu> : null}
             {   isAuthenticated ? <SideNav></SideNav> : null}
             <Switch>
-                {/* <ProtectedRoute
+                {<ProtectedRoute
                     exact
                     path="/"
-                    component={Home}
+                    component={Main}
                     isAuthenticated={isAuthenticated}
                     isVerifying={isVerifying}
-                /> */}
+                />}
                 <Route path="/login" component={Login} />
             </Switch>
         </div>
