@@ -4,5 +4,7 @@
 body {
     margin: 0px;
     padding: 0px;
+}
+html {
     font-family: "Open Sans","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 }

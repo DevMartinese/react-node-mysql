@@ -1,0 +1,17 @@
+{
+    "channels": [
+        {
+            "id": 0,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkayAlSSYU2Adtyi7MDezrZb3e-D0wTTlfDLZNYvFCVL9jqheD",
+            "titulo": "Argentina",
+            "descripcion": "Descripcion",
+            "code": "gh"
+        },
+        {
+            "id": 1,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTUhWPnCCmn0HcPUoc7qBxH7guFRfFVwvYLqYqdYQBveqeIE_FV",
+            "titulo": "Python",
+            "descripcion": "Descripcion 2"
+        }
+    ]
+}

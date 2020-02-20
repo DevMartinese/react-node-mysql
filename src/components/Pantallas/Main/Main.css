@@ -1,0 +1,16 @@
+.sideNavComponent {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 60px;
+    width: 79%;
+}
+
+.title {
+    margin: 30px;
+    color: #3e416d;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(62, 65, 109, .1);
+}
+.channelList {
+    padding: 10px 30px;
+}

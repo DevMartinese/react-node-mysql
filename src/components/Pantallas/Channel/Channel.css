@@ -1,0 +1,57 @@
+.channelBody {
+    display: inline-block;
+    height: 150px;
+    margin: 10px;
+    width: 30%;
+    border-radius: 17px;
+    position: relative;
+    box-shadow: 3px 2px 8px rgba(50, 50, 50, 0.4);
+}
+
+.textChannel {
+    position: absolute;
+    bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: orange;
+    color:white;
+    padding-right: 20px;
+    min-width: 60%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.textChannel h6 {
+    margin: 0px;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+.textChannel span {
+    font-size: 10px;
+    padding-left: 10px;
+}
+.joinChannel {
+    position: absolute;
+    top: 15px;
+    text-align: right;
+    width: 100%;
+}
+.joinChannel button {
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    color: white;
+    align-items: center;
+    display: inline-flex;
+    background-color: rgba(254,127,5, .2);
+    cursor: pointer;
+}
+.joinChannel button span {
+    margin-left: 5px;
+    display: none;
+}
+.joinChannel button:hover > span {
+    display: block;
+}
+

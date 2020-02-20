@@ -11,10 +11,12 @@ import { FaLaptopCode, FaRegEnvelope, FaRegBell } from 'react-icons/fa';
 
 class TopMenu extends Component {
     render() {
+        const { user, userPhoto } = this.props;
         return (
             <div className="navTop">
                 <div className="navTopLeft">
-                    <img alt="logo" src="http://demo.foxthemes.net/gotubev1/assets/images/logo.png"></img>
+                    <img alt="logo" src="{userPhoto}"></img>
+                    { user }
                 </div>
                 <div className="navTopCenter">
                     <div className="searchBar">
@@ -50,7 +52,9 @@ class TopMenu extends Component {
 }
 function mapStateToProps(state) {
     return {
-        isAuthenticated: state.auth.isAuthenticated
+        isAuthenticated: state.auth.isAuthenticated,
+        userName: state.auth.user.displayName,
+        userPhoto: state.auth.user.photoURL
     };
 }
 
