@@ -10,6 +10,8 @@ class Channel extends Component {
 
     // Join to Channel
     joinChannel = () => {
+        const { code } = this.props;
+        window.open('http://localhost:3000/?roomCode=' + code);
     }
 
     render() {
