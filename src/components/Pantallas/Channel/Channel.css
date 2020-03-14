@@ -3,6 +3,8 @@
     height: 150px;
     margin: 10px;
     width: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 17px;
     position: relative;
     box-shadow: 3px 2px 8px rgba(50, 50, 50, 0.4);
@@ -13,7 +15,7 @@
     bottom: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: orange;
+    background-color: rgba(60, 200, 231, .7);
     color:white;
     padding-right: 20px;
     min-width: 60%;
@@ -44,14 +46,13 @@
     color: white;
     align-items: center;
     display: inline-flex;
-    background-color: rgba(254,127,5, .2);
+    background-color: rgba(60, 200, 231, .7);
     cursor: pointer;
 }
 .joinChannel button span {
     margin-left: 5px;
-    display: none;
 }
 .joinChannel button:hover > span {
-    display: block;
+    text-decoration: underline;
 }
 

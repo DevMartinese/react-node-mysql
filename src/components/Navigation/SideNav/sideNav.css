@@ -9,20 +9,25 @@ a { text-decoration: none; }
 hr {
     border: 1px solid rgba(200,200,200, .2);
 }
-
-.sideNav {
-    border-right: 1px solid rgba(200, 200, 200, 0.4);
+.sideNavSolid {
     width: 20%;
+    min-height: 100vh;
+}
+.sideNav {
+    border-right: 1px solid rgba(60, 200, 231, .3);
     z-index: 1;
-    padding-top: 60px;
+    padding-top: 10px;
     max-height: 100vh;
+    min-height: 100vh;
     padding-bottom: 60px;
+    background-color: rgb(27, 32, 57);
     overflow-y: scroll;
-    display: inline-block;
+    display: inline-table;
+    position: fixed;
 }
 
 .sideNav-title {
-    color: #999595;
+    color: #ffffff;
     letter-spacing: .5625pt;
     padding: 15px 25px;
     font-size: 12px;
@@ -32,9 +37,10 @@ hr {
 .sideNav li {
     font-size: .875pc;
     align-items: center;
-    color: #6d6d6d;
+    color: #ffffff;
     display: flex;
-    padding: 15px 25px;
+    padding: 15px;
+    justify-content: center;
     font-weight: 600;
     cursor: pointer;
 }
@@ -47,14 +53,14 @@ hr {
 }
 
 #selected {
-    color:orange !important;
-    background-color: rgba(254,127,5, .2);
+    color:#3BC8E7 !important;
+    background-color: rgba(200,200,200, .2);
 }
 
 #selected:before {
     border-radius: 22%;
     height: 20px;
-    background: linear-gradient(to right,#fd0505,#ffa805);
+    background: linear-gradient(to right,#fd0505,#3BC8E7);
     width: .1875in;
     content: "";
     position: absolute;

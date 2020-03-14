@@ -2,10 +2,10 @@
     "channels": [
         {
             "id": 0,
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkayAlSSYU2Adtyi7MDezrZb3e-D0wTTlfDLZNYvFCVL9jqheD",
-            "titulo": "Argentina",
+            "image": "https://miro.medium.com/max/3000/1*A8rD301aBaps5QL7EZKBdA.jpeg",
+            "titulo": "Principiante",
             "descripcion": "Descripcion",
-            "code": "xMf80dATuePTBtURAAAA"
+            "roomName": "xMf80dATuePTBtURAAAA"
         }
     ]
 }

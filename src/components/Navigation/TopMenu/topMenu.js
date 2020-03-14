@@ -11,13 +11,9 @@ import { FaLaptopCode, FaRegEnvelope, FaRegBell } from 'react-icons/fa';
 
 class TopMenu extends Component {
     render() {
-        const { user, userPhoto } = this.props;
+        const { userName, userPhoto } = this.props;
         return (
             <div className="navTop">
-                <div className="navTopLeft">
-                    <img alt="logo" src="{userPhoto}"></img>
-                    { user }
-                </div>
                 <div className="navTopCenter">
                     <div className="searchBar">
                         <div className="searchBarIcon">
@@ -29,19 +25,20 @@ class TopMenu extends Component {
                 <div className="navTopRight">
                     <li>
                         <button>
-                            <span className="badge">2</span>
+                            {/* <span className="badge">2</span> */}
                             <FaRegBell />
                         </button>
                     </li>
                     <li>
                         <button>
-                            <span className="badge">2</span>
+                            {/* <span className="badge">2</span> */}
                             <FaRegEnvelope />
                         </button>
                     </li>
                     <li>
                         <button onClick={this.showUserMenu}>
-                            <img alt="user" src="http://demo.foxthemes.net/gotubev1/assets/images/avatars/avatar-1.jpg" />
+                            <small>{userName}</small>
+                            <img alt="user" src={userPhoto} /> 
                         </button>
                     </li>
                 </div>

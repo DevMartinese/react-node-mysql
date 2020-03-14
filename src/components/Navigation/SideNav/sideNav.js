@@ -20,37 +20,15 @@ class sideNav extends Component {
                 <div className="sideNav-title">
                     Menu
                 </div>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
                 <li id="selected">
                     <FaLaptopCode />
-                    <span>Inicio</span>
-                </li>
-                <li>
-                    <FaLaptopCode />
-                    <span>Inicio</span>
                 </li>
                 <hr></hr>
-                <div className="sideNav-title">
-                    Menu
-                </div>
                 <li>
                     <FaCog />
-                    <span>Configuración</span>
                 </li>
                 <li onClick={this.logoutUserAction}>
                     <FaPowerOff />
-                    <span>Cerrar sesión</span>
                 </li>
             </div>
         )
