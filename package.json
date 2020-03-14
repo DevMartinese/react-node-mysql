@@ -35,7 +35,7 @@
     "timeago.js": "^4.0.2"
   },
   "scripts": {
-    "start": "set PORT=3006 && react-scripts start",
+    "start": "set PORT=3006 && react-scripts start && npm run api",
     "api": "json-server --watch db.json --port 4001"
   },
   "eslintConfig": {
