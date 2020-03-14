@@ -26,7 +26,7 @@
     "react-icons": "^3.9.0",
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "3.2.0",
     "react-with-firebase-auth": "^1.3.0",
     "redux": "^4.0.5",
     "redux-actions": "^2.6.5",
@@ -36,7 +36,8 @@
   },
   "scripts": {
     "start": "set PORT=3006 && react-scripts start && npm run api",
-    "api": "json-server --watch db.json --port 4001"
+    "api": "json-server --watch db.json --port 4001",
+    "deploy": "serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"
