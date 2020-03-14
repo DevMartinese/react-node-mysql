@@ -30,7 +30,7 @@ class Main extends Component {
                             titulo={channel.titulo}
                             descripcion={channel.descripcion}
                             image={channel.image}
-                            code={channel.code}
+                            roomName={channel.roomName}
                             >
 
                             </Channel>

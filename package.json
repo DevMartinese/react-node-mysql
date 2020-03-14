@@ -10,7 +10,6 @@
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.4.1",
     "connect-flash": "^0.1.1",
-    "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-mysql-session": "^2.1.2",
     "express-session": "^1.17.0",
@@ -60,5 +59,8 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "nodemon": "^2.0.2"
+  },
+  "engines": {
+    "node": "13.1.x"
   }
 }

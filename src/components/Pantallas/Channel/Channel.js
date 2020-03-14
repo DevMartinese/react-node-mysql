@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Channel.css';
 
+import * as env from '../../../environment.env'
 
 // Icons
 import { FaLaptopCode } from 'react-icons/fa';
@@ -10,13 +11,12 @@ class Channel extends Component {
 
     // Join to Channel
     joinChannel = () => {
-        const { code } = this.props;
-        window.open('http://localhost:3000/?roomCode=' + code);
+        const { roomName } = this.props;
+        window.open('https://prueba-rtc-multiple.herokuapp.com?roomId=' + roomName);
     }
 
     render() {
         const { image, descripcion, titulo } = this.props;
-
         const divStyle = {backgroundImage: 'url(' + image + ')'};
         return (
             <div className="channelBody" style={divStyle}>
